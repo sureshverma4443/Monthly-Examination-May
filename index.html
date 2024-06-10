@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+     width: 100%;
+     height: 75px;
+     background-color: cadetblue;
+     display: flex;
+     flex-direction: row; 
+     justify-content:space-around;
+     
+
+    }
+    .navlogo{
+        width: 10%;
+        /* border: 1px solid black; */
+        align-items: center;
+        
+    }
+    .navlogo img{
+        width: 70%;
+        margin: auto;
+        /* border: 1px solid black; */
+
+    }
+    .navlink{
+        /* border: 1px solid black; */
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .navlink a{
+        color: white;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .navlink a:hover{
+        color:black;
+        cursor: pointer;
+    }
+    .navsearch{
+        display: flex;
+        width: 13%;
+        gap: 5%;
+        /* border: 1px solid black; */
+        align-items: center;
+        
+        
+
+    }
+    .navsearch input{
+        width: 70%;
+        height: 20px;
+    }
+    .navsearch button{
+        height: 25px;
+    }
+    .navsearch button:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    .Herosection img{
+        width: 100%;
+        height: 800px;
+    }
+    .Detail{
+        display: flex;
+        flex-direction: row;
+        height: 600px;
+    }
+    .Detailfirst{
+        width: 50%;
+        /* border: 1px solid black; */
+        
+
+    }
+    #form{
+        width: 40%;
+        /* border: 1px solid black; */
+        height: 350px;
+        margin: 10% auto;
+        padding: 2%;
+        background-color: rgb(217, 243, 234);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    }
+    #form h1{
+        text-align: center;
+        margin: 10%;
+    }
+    .lableinput{
+        margin-left: 20% ;
+    }
+    .lableinput label{
+        font-size: x-large;
+    }
+    .lableinput input{
+        height: 18px;
+        width: 70%;
+    }
+    .button button{
+        text-align: center;
+        width:30%;
+    }
+    .button {
+        text-align: center;
+        /* width:30%; */
+    }
+    .button button:hover{
+        background-color:black;
+        color: white;
+    }
+    #Entry{
+        /* border:1px solid black; */
+        width: 50%;
+        margin: auto;
+        padding: 5%;
+
+    }
+table{
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+}
+thead{
+    background-color: black;
+    color: white;
+    border: 1px solid;
+} 
+
+td,th{
+    border: 1px solid black;
+}
+tbody:nth-child(odd){
+        background-color: rgb(210, 242, 161);
+}
+tbody:nth-child(even){
+        background-color: rgb(147, 231, 231);
+} 
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color:black;
+    justify-content: center;
+    border: 1px solid;
+    color: white;
+}
+.birdadvertise{
+
+width: 30%;
+}
+.advertise{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   gap: 8%;
+}
+.advertise img{
+    width:20%;
+    height: 50px;
+    border-radius: 50%;
+}
+.birdadvertiselogo{
+    display: flex;
+    flex-direction: row;
+    gap:10%
+   
+}
+.birdadvertiselogo img{
+    width: 10%;
+    border-radius: 50%;
+
+}
+.birdadvertiselink{
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+    width: 40%;
+    font-size: larger;
+    padding: 1%;
+    
+}
+.birdadvertiselink div{
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    ;
+}
+.birdadvertiselink div a{
+    text-decoration: none;
+    color: white;
+}
+.birdadvertisemailsearch{
+    display: flex;
+    gap: 10%;
+
+
+
+
+
+}
+span{
+    display: none;
+
+}
+@media screen and (min-width:200px)and (max-width:460px){
+    nav{
+     width: 100%;
+     height: 75px;
+     background-color: cadetblue;
+     display: flex;
+     flex-direction: row; 
+     justify-content:space-around;
+     
+
+    }
+    span{
+        display: block;
+        width: 2%;
+        font-size: xx-large;
+        margin: auto;
+        color: white;
+    }
+    .navlogo{
+        width: 40%;
+        /* border: 1px solid black; */
+        align-items: center;
+        
+        
+    }
+    .navlogo img{
+        width: 70%;
+        margin: auto;
+        /* border: 1px solid black; */
+
+    }
+    .navlink{
+        /* border: 1px solid black; */
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+
+    }
+    .navlink a{
+        color: white;
+        text-decoration: none;
+        font-size: larger;
+        display: none;
+    }
+    .navlink a:hover{
+        color:black;
+        cursor: pointer;
+    }
+    .navsearch{
+        display: flex;
+        width: 13%;
+        gap: 5%;
+        display: none;
+        /* border: 1px solid black; */
+        align-items: center;
+        
+        
+
+    }
+    .navsearch input{
+        width: 70%;
+        height: 20px;
+    }
+    .navsearch button{
+        height: 25px;
+    }
+    .navsearch button:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    .Herosection img{
+        width: 100%;
+        height: 800px;
+    }
+    .Detail{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .Detailfirst{
+        width: 100%;
+        /* border: 1px solid black; */
+        
+
+    }
+    #form{
+        width: 40%;
+        /* border: 1px solid black; */
+        height: 350px;
+        margin: 10% auto;
+        padding: 2%;
+        background-color: rgb(217, 243, 234);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    }
+    #form h1{
+        text-align: center;
+        margin: 10%;
+    }
+    .lableinput{
+        margin-left: 20% ;
+    }
+    .lableinput label{
+        font-size: x-large;
+    }
+    .lableinput input{
+        height: 18px;
+        width: 70%;
+    }
+    .button button{
+        text-align: center;
+        width:30%;
+    }
+    .button {
+        text-align: center;
+        /* width:30%; */
+    }
+    .button button:hover{
+        background-color:black;
+        color: white;
+    }
+    #Entry{
+        /* border:1px solid black; */
+        width: 50%;
+        margin: auto;
+        padding: 5%;
+
+    }
+table{
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+}
+thead{
+    background-color: black;
+    color: white;
+    border: 1px solid;
+} 
+
+td,th{
+    border: 1px solid black;
+}
+tbody:nth-child(odd){
+        background-color: rgb(210, 242, 161);
+}
+tbody:nth-child(even){
+        background-color: rgb(147, 231, 231);
+} 
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color:black;
+    justify-content: center;
+    border: 1px solid;
+    color: white;
+    margin: auto;
+    padding: 5%;
+   
+}
+.birdadvertise{
+margin: auto;
+width: 100%;
+gap: 10%;
+
+}
+.advertise{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   gap: 10%;
+   margin: auto;
+}
+.advertise img{
+    width:20%;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+}
+.birdadvertiselogo{
+    display: flex;
+    flex-direction: row;
+    gap:10%
+   
+}
+.birdadvertiselogo img{
+    width: 10%;
+    border-radius: 50%;
+    margin: auto;
+
+}
+.birdadvertiselink{
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+    width: 100%;
+    font-size: larger;
+    padding: 10%;
+    
+}
+.birdadvertiselink div{
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    ;
+}
+.birdadvertiselink div a{
+    text-decoration: none;
+    color: white;
+}
+.birdadvertisemailsearch{
+    display: flex;
+    align-items: center;
+    padding: -5%;
+    /* flex-direction: row; */
+    /* border: 1px solid red; */
+    /* gap: 2%; */
+}
+.birdadvertisemailsearch input{
+    width: 50%;
+}
+.birdadvertisemailsearch button{
+    width: 20%;
+}
+}
+@media screen and (min-width:461px)and (max-width:840px){
+    nav{
+     width: 100%;
+     height: 75px;
+     background-color: cadetblue;
+     display: flex;
+     flex-direction: row; 
+     justify-content:space-around;
+     
+
+    }
+    .navlogo{
+        width: 20%;
+        /* border: 1px solid black; */
+        align-items: center;
+        
+    }
+    .navlogo img{
+        width: 80%;
+        margin: auto;
+        /* border: 1px solid black; */
+
+    }
+    .navlink{
+        /* border: 1px solid black; */
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+    .navlink a{
+        color: white;
+        text-decoration: none;
+        font-size: larger;
+    }
+    .navlink a:hover{
+        color:black;
+        cursor: pointer;
+    }
+    .navsearch{
+        display: flex;
+        width: 13%;
+        gap: 5%;
+        /* border: 1px solid black; */
+        align-items: center;
+        
+        
+
+    }
+    .navsearch input{
+        width: 70%;
+        height: 20px;
+    }
+    .navsearch button{
+        height: 25px;
+    }
+    .navsearch button:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    .Herosection img{
+        width: 100%;
+        height: 800px;
+    }
+    .Detail{
+        display: flex;
+        flex-direction: row;
+        height: 600px;
+    }
+    .Detailfirst{
+        width: 50%;
+        /* border: 1px solid black; */
+        
+
+    }
+    #form{
+        width: 50%;
+        /* border: 1px solid black; */
+        height: auto;
+        margin: 10% auto;
+        padding: 2%;
+        background-color: rgb(217, 243, 234);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    }
+    #form h1{
+        text-align: center;
+        margin: 10%;
+    }
+    .lableinput{
+        margin-left: 20% ;
+    }
+    .lableinput label{
+        font-size: x-large;
+    }
+    .lableinput input{
+        height: 18px;
+        width: 70%;
+    }
+    .button button{
+        text-align: center;
+        width:30%;
+    }
+    .button {
+        text-align: center;
+        /* width:30%; */
+    }
+    .button button:hover{
+        background-color:black;
+        color: white;
+    }
+    #Entry{
+        /* border:1px solid black; */
+        width: 50%;
+        margin: auto;
+        padding: 5%;
+
+    }
+table{
+    border: 1px solid;
+    width: 100%;
+    text-align: center;
+}
+thead{
+    background-color: black;
+    color: white;
+    border: 1px solid;
+} 
+
+td,th{
+    border: 1px solid black;
+}
+tbody:nth-child(odd){
+        background-color: rgb(210, 242, 161);
+}
+tbody:nth-child(even){
+        background-color: rgb(147, 231, 231);
+} 
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color:black;
+    justify-content: center;
+    border: 1px solid;
+    color: white;
+}
+.birdadvertise{
+
+width: 30%;
+}
+.advertise{
+    display: flex;
+    flex-direction: row;
+   align-items: center;
+   gap: 8%;
+}
+.advertise img{
+    width:20%;
+    height: 50px;
+    border-radius: 50%;
+}
+.birdadvertiselogo{
+    display: flex;
+    flex-direction: row;
+    gap:10%
+   
+}
+.birdadvertiselogo img{
+    width: 10%;
+    border-radius: 50%;
+
+}
+.birdadvertiselink{
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+    width: 40%;
+    font-size: larger;
+    padding: 1%;
+    
+}
+.birdadvertiselink div{
+    display: flex;
+    gap: 5%;
+    flex-direction: column;
+    ;
+}
+.birdadvertiselink div a{
+    text-decoration: none;
+    color: white;
+}
+.birdadvertisemailsearch{
+    display: flex;
+    gap: 10%;
+
+
+
+
+
+}
+
+}
+
+    
+
+</style>
+<body>
+    <nav>
+        <div class="navlogo">
+           <img src="https://1000logos.net/wp-content/uploads/2018/02/BMW-Logo-1997.png">
+        </div>
+        <div class="navlink">
+               <a href="">Home</a>
+               <a href="">Gallery</a>
+               <a href="">Modele</a>
+               <a href="">About</a>
+               <a href="">Contact Us</a>
+        </div>
+        <div class="navsearch">
+              <input placeholder="Search">
+              <button>Submit</button>
+        </div>
+        <span>&#9776;</span>
+    </nav>
+    
+    <div class="Herosection">
+        <img src="https://images4.alphacoders.com/225/thumb-1920-225138.jpg" >
+        
+
+    </div>
+    <div class="Detail">
+        <div class="Detailfirst">
+            <form id="form">
+            <h1>Registration Form</h1>
+            <div class="lableinput">
+                <label>Name</label><br>
+                <input type="text" id="Name" name="name" required placeholder="Enter is your Name"><br><br>
+                <label>Mobile</label><br>
+                <input type="tel" id="Mobile" name="mobile" required placeholder="Enter is your Mobile"><br><br><br><br>
+            </div>
+            <div class="button">
+                <button id="button">Submit</button>
+            </div>
+                  
+            </form>
+        </div>
+        <div id="Entry">
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="birdadvertise">
+            <div class="advertise"><img src="https://1000logos.net/wp-content/uploads/2018/02/BMW-Logo-1997.png">
+                <h1>Car Advertise</h1></div>
+            <p>2023 Bird Advertise. All rights reserved</p>
+            <div class="birdadvertiselogo">
+                <img src="./photo/twiter logi.webp">
+                <img src="./photo/youtube logo.jpg" alt="">
+                <img src="./photo/Instagram_icon.png.webp">
+            </div>
+            
+        </div>
+        <div class="birdadvertiselink">
+            <div>
+                <a href="">Company</a>
+                <a href="">About us</a>
+                <a href="">Blog</a>
+                <a href="">contact us</a>
+                <a href="">Pricing</a>
+                <a href="">Testimonials</a>
+            </div>
+            <div>
+                <a href="">Support</a>
+                <a href="">Help Center</a>
+                <a href="">Terms of Service</a>
+                <a href="">Legal</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Satus</a>
+            </div>
+        </div>
+        <div class="birdadvertisemail">
+            <h1>Stay Up to date</h1>
+            <div class="birdadvertisemailsearch">
+                <input placeholder="Search">
+                <button>Search</button>
+              </div>
+
+        </div>
+    </footer>
+</body>
+<script>
+    let arr=JSON.parse(localStorage.getItem("user"))||[]
+    
+    let form=document.getElementById("form");
+    let button=document.getElementById("button");
+    button.addEventListener("click",getdata)
+    function getdata(event){
+        event.preventDefault();
+        let obj={
+            name:document.getElementById("Name").value,
+            mobile:document.getElementById("Mobile").value
+    }
+    arr.push(obj)
+    localStorage.setItem("user",JSON.stringify(arr))
+    display(arr)
+    console.log(arr)
+    form.reset();
+
+
+}
+let Entry=document.getElementById("Entry")
+let table=document.createElement("table")
+let tbody=document.createElement("tbody")
+let thead=document.createElement("thead")
+let tr=document.createElement("tr")
+let th1=document.createElement("th")
+th1.innerText="Sr.No."
+let th2=document.createElement("th")
+th2.innerText="Name"
+let th3=document.createElement("th")
+th3.innerText="Mobile"
+
+tr.append(th1,th2,th3)
+thead.append(tr)
+table.append(thead)
+Entry.append(table)
+
+function display(user){
+    tbody.innerHTML=null
+    user.forEach((ele,index) => {
+        index++
+        let Entry=document.getElementById("Entry")
+       ' // let table=document.createElement("table")'
+        // let tbody=document.createElement("tbody")
+        let tr=document.createElement("tr")
+        let td1=document.createElement("td")
+        td1.innerText=index
+        let td2=document.createElement("td")
+        td2.innerText=ele.name
+        let td3=document.createElement("td")
+        td3.innerText=ele.mobile
+        tr.append(td1,td2,td3)
+        tbody.append(tr)
+        table.append(tbody)
+        Entry.append(table)
+
+        
+    });
+}
+
+display(arr)
+
+ 
+
+
+
+
+
+</script>
+</html>
